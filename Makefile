@@ -2,9 +2,9 @@ run:
 	docker-compose up --no-deps --build
 build:
 	rm -rf ./back
-	rm -rf ./front
 	git clone git@github.com:Khedmatkar-OOD-spring-2022/khedmatkar-Backend.git ./back
-	git clone git@github.com:Khedmatkar-OOD-spring-2022/khedmatkar-UI.git ./front
+	rm -rf ./nginx/app
+	git clone git@github.com:Khedmatkar-OOD-spring-2022/khedmatkar-UI.git ./nginx/app
 	docker-compose up --no-deps --build
 stop:
 	docker-compose stop
